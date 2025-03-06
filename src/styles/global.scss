@@ -1,0 +1,44 @@
+// Fons
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 300;
+    src: url('../../public/fonts/PlusJakartaSans/PlusJakartaSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 400;
+    src: url('../../public/fonts/PlusJakartaSans/PlusJakartaSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    src: url('../../public/fonts/PlusJakartaSans/PlusJakartaSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    src: url('../../public/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold.ttf') format('truetype');
+}
+
+// Fons
+
+// Common styles
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 0.833333vw;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    color: #111827;
+    background-color: #FAFAFA;
+}
+
+// Common styles

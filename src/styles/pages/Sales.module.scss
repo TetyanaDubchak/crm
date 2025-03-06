@@ -1,0 +1,13 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    background-color: v.$light-4-c;
+    border-radius: 4px;
+    width: 40%;
+    border: 1px solid v.$light-4-c;
+    max-height: calcOutValue(348);
+    overflow-y: auto;
+}

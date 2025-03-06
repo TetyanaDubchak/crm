@@ -1,0 +1,12 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    display: flex;
+}
+
+.pages-wrapper{
+    width: 100%;
+}

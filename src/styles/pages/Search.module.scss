@@ -1,0 +1,9 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    @include m.flexibility(row,space-between,center);
+    padding: calcOutValue(32) calcOutValue(40);
+}

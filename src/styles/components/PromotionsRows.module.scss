@@ -1,0 +1,31 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.item:nth-child(odd) {
+    background-color: v.$light-1-c;
+}
+
+.company-content {
+    @include m.flexibility(row, flex-start, center);
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+    gap: calcOutValue(8);
+    padding: calcOutValue(8) calcOutValue(20);
+    border-right: 1px solid v.$light-4-c;
+
+    img {
+        width: calcOutValue(20);
+        height: calcOutValue(20);
+    }
+}
+
+.name-content {
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+    text-align: center;
+}
+
+.percent-content {
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+    text-align: center;
+}

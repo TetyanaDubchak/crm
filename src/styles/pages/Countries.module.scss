@@ -1,0 +1,23 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper {
+    background-color: v.$light-4-c;
+    border-radius: 4px;
+    width: 49%;
+    border: 1px solid v.$light-4-c;
+    height: calcOutValue(348);
+}
+
+.content-wrapper{
+    @include m.flexibility(row,space-between,flex-end);
+    gap: calcOutValue(8);
+    padding: 0 calcOutValue(20) calcOutValue(20) calcOutValue(22);
+}
+
+.map{
+    width: calcOutValue(394);
+    height: auto;
+}

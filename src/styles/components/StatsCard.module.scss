@@ -1,0 +1,34 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.item{
+    background: rgb(233, 213, 255);
+    background: radial-gradient(circle, rgba(233, 213, 255, 1) 16%, rgba(217, 249, 157, 1) 78%);
+    padding: calcOutValue(28);
+    flex-basis: calc((100% - calcOutValue(60)) / 4);
+    border-radius: 4px;
+}
+
+.title{
+    @include m.text-character(calcOutValue(12),calcOutValue(16),v.$dark-1-c);
+    @include m.flexibility(row, flex-start,center);
+    gap: calcOutValue(8);
+    margin-bottom: calcOutValue(20);
+
+    &::before{
+        content: '';
+        display: block;
+        width: calcOutValue(16);
+        height: 2px;
+        background-color: v.$dark-1-c;
+        border-radius: calcOutValue(20);
+    }
+}
+
+.content{
+    @include m.text-character(calcOutValue(60), calcOutValue(60), v.$dark-1-c);
+    font-weight: 600;
+    padding-left: calcOutValue(24);
+}

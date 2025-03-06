@@ -1,0 +1,132 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.row{
+    background-color: v.$light-1-c;
+    margin-bottom: calcOutValue(8);
+    border-radius: 4px;
+    &:not(:last-child){
+        margin-bottom: calcOutValue(8);
+    }
+}
+
+.category-window{
+    @include m.flexibility(row,flex-start,center);
+    gap: calcOutValue(12);
+    font-size:calcOutValue(12);
+    line-height: calcOutValue(16);
+    font-weight: 500;
+    text-transform: capitalize;
+
+    &::before{
+        content: '';
+        display: block;
+        width: calcOutValue(4);
+        height: calcOutValue(56);
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+}
+
+.category-active{
+    color: v.$green-3-c;
+
+    &::before{
+        background-color: v.$green-3-c;
+    }
+}
+
+.category-not-active {
+    color: v.$red-3-c;
+
+    &::before {
+        background-color: v.$red-3-c;
+    }
+}
+
+.category-pending {
+    color: v.$orange-1-c;
+
+    &::before {
+        background-color: v.$orange-1-c;
+    }
+}
+
+.category-suspended {
+    color: v.$blue-3-c;
+
+    &::before {
+        background-color: v.$blue-3-c;
+    }
+}
+
+.name-window{
+    div{
+        @include m.flexibility(row,flex-start,center);
+        @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+        font-weight: 500;
+        gap: calcOutValue(16);
+    }
+    
+
+    img{
+        width: calcOutValue(32);
+        height: calcOutValue(32);
+    }
+}
+
+.promotion-content{
+    @include m.flexibility(row,center,center);
+    gap: calcOutValue(8);
+    font-size: calcOutValue(14);
+    line-height: calcOutValue(20);
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: calcOutValue(4) calcOutValue(14);
+    border-radius: calcOutValue(28);
+    width: auto;
+    &::before{
+        display: block;
+        content: '';
+        width: calcOutValue(4);
+        height: calcOutValue(4);
+        border-radius: 50%;
+    }
+}
+
+.promotion-active{
+    background-color: v.$green-1-c;
+    color: v.$green-2-c;
+    &::before{
+        background-color: v.$green-2-c;
+    }
+}
+
+.promotion-not-active {
+    background-color: v.$red-1-c;
+    color: v.$red-2-c;
+
+    &::before {
+        background-color: v.$red-2-c;
+    }
+}
+
+.promotion-pending {
+    background-color: v.$orange-2-c;
+    color: v.$orange-3-c;
+
+    &::before {
+        background-color: v.$orange-3-c;
+    }
+}
+
+.promotion-suspended {
+    background-color: v.$blue-2-c;
+    color: v.$blue-1-c;
+
+    &::before {
+        background-color: v.$blue-1-c;
+    }
+}

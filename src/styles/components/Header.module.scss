@@ -1,0 +1,30 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    border-bottom: 1px solid v.$grey-1-c;
+    width: 100%;
+    padding: calcOutValue(24) calcOutValue(40);
+    @include m.flexibility(row, space-between, center);
+}
+
+.title{
+    @include m.text-character(calcOutValue(30), calcOutValue(36), v.$dark-1-c);
+    font-weight: 600;
+}
+
+.user-wrapper{
+    @include m.flexibility(row, flex-start,center);
+    gap: calcOutValue(12);
+}
+
+.picture{
+    width: calcOutValue(44);
+    height: calcOutValue(44);
+}
+
+.name{
+    @include m.text-character(calcOutValue(15), calcOutValue(24), v.$dark-1-c)
+}

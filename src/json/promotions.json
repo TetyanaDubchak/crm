@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "company": "Costco Wholesale",
+    "name": "Norem ipsum dolor ",
+    "percent": 40
+  },
+  {
+    "id": 2,
+    "company": "Costco Wholesale",
+    "name": "Norem ipsum dolor ",
+    "percent": 24
+  },
+  {
+    "id": 3,
+    "company": "Costco Wholesale",
+    "name": "Norem ipsum dolor ",
+    "percent": 8
+  },
+  {
+    "id": 4,
+    "company": "Costco Wholesale",
+    "name": "Norem ipsum dolor ",
+    "percent": 80
+  },
+  {
+    "id": 5,
+    "company": "Costco Wholesale",
+    "name": "Norem ipsum dolor ",
+    "percent": 10
+  },
+  {
+    "id": 6,
+    "company": "Costco Wholesale",
+    "name": "Norem ipsum dolor ",
+    "percent": 2
+  }
+]

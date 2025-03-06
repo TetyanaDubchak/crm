@@ -1,0 +1,39 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.item{
+    position: relative;
+    padding-left: calcOutValue(12);
+    margin-bottom: calcOutValue(28);
+
+    a{
+        @include m.flexibility(row, flex-start, center);
+        gap: calcOutValue(14);
+    }
+
+    & svg{
+        width: calcOutValue(18);
+        height: calcOutValue(18);
+    }
+}
+
+.title{
+    font-weight: 500;
+    @include m.text-character(calcOutValue(16), calcOutValue(24), v.$light-1-c);
+}
+
+.active{
+    &::after{
+        position: absolute;
+        right: 0;
+        
+        content: '';
+        display: block;
+        width:calcOutValue(4);
+        height: calcOutValue(36);
+        border-radius: 2px;
+        background-color: v.$light-3-c;
+    }
+}

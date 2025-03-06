@@ -1,0 +1,22 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../function.scss';
+
+.element:not(:last-child){
+    margin-bottom: calcOutValue(8);
+}
+
+.info{
+    @include m.flexibility(row,flex-start,center);
+    gap: calcOutValue(8);
+
+    &::before{
+        content: '';
+        display: block;
+        width: calcOutValue(8);
+        height: calcOutValue(8);
+        border-radius: 50%;
+        background-color: v.$light-3-c;
+    }
+}

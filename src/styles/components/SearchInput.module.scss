@@ -1,0 +1,36 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    width: 38%;
+    position: relative;
+}
+
+.input{
+    @include m.text-character(calcOutValue(14),calcOutValue(20),v.$grey-3-c);
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid v.$grey-1-c;
+    padding: calcOutValue(12);
+    background-color: transparent;
+    width: 100%;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.button{
+    position: absolute;
+    right: 0;
+    width: calcOutValue(44);
+    height: calcOutValue(44);
+    background-color: transparent;
+
+    & svg{
+        width: calcOutValue(20);
+        height: calcOutValue(20);
+    }
+}

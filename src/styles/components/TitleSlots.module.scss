@@ -1,0 +1,13 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    padding: calcOutValue(20);
+}
+
+.title{
+    @include m.text-character(calcOutValue(20), calcOutValue(28), v.$dark-1-c);
+    font-weight: 500;
+}

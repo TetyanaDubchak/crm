@@ -1,0 +1,33 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: calcOutValue(240);
+    background-color: v.$dark-1-c;
+    padding: calcOutValue(32) calcOutValue(4) calcOutValue(120) calcOutValue(4);
+}
+
+.logo{
+    width: calcOutValue(122);
+    height: calcOutValue(24);
+    margin: 0 auto calcOutValue(78) auto;
+}
+
+.exit{
+    @include m.text-character(calcOutValue(16),calcOutValue(24), v.$light-1-c);
+    @include m.flexibility(row,center,center);
+    gap: calcOutValue(8);
+    margin: auto auto 0 auto;
+    background-color: transparent;
+    font-weight: 500;
+
+    svg{
+        width: calcOutValue(18);
+        height: calcOutValue(18);
+    }
+}

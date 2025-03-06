@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Costco Wholesale",
+    "sold": 459,
+    "price": 600
+  },
+  {
+    "id": 2,
+    "name": "Costco Wholesale",
+    "sold": 459,
+    "price": 600
+  },
+  {
+    "id": 3,
+    "name": "Costco Wholesale",
+    "sold": 459,
+    "price": 600
+  },
+  {
+    "id": 4,
+    "name": "Costco Wholesale",
+    "sold": 459,
+    "price": 600
+  },
+  {
+    "id": 5,
+    "name": "Costco Wholesale",
+    "sold": 459,
+    "price": 600
+  },
+  {
+    "id": 6,
+    "name": "Costco Wholesale",
+    "sold": 459,
+    "price": 600
+  }
+]

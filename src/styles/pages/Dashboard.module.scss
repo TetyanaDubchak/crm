@@ -1,0 +1,14 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    padding: calcOutValue(40);
+}
+
+.contact-wrapper{
+    @include m.flexibility(row,space-between, flex-start);
+    flex-wrap: wrap;
+    gap: calcOutValue(20);
+}

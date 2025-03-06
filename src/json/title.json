@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Total promotions",
+    "quantity": 432
+  },
+  {
+    "id": 2,
+    "name": "Total category",
+    "quantity": 8
+  },
+  {
+    "id": 3,
+    "name": "New companies",
+    "quantity": 28
+  },
+  {
+    "id": 4,
+    "name": "Total active companies",
+    "quantity": 670
+  }
+]
