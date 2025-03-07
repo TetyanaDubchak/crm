@@ -9,23 +9,33 @@ export interface CompaniesRowsProps {
 }
 
 export default function CompaniesRows({ company }: CompaniesRowsProps) {
+  const formatDate = (isoDate: string) => {
+    return new Date(isoDate).toLocaleDateString('uk-UA', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+    });
+  };
   return (
     <>
       {company.map((item) => {
         return (
           <tr className={s['row']} key={item.id}>
-            <td
-              className={clsx(s['category-window'], {
-                [s['category-active']]: item.status.toLowerCase() === 'active',
-                [s['category-not-active']]:
-                  item.status.toLowerCase() === 'not active',
-                [s['category-pending']]:
-                  item.status.toLowerCase() === 'pending',
-                [s['category-suspended']]:
-                  item.status.toLowerCase() === 'suspended',
-              })}
-            >
-              {item.category}
+            <td className={s['category-window']}>
+              <div
+                className={clsx(s['category-content'], {
+                  [s['category-active']]:
+                    item.status.toLowerCase() === 'active',
+                  [s['category-not-active']]:
+                    item.status.toLowerCase() === 'not active',
+                  [s['category-pending']]:
+                    item.status.toLowerCase() === 'pending',
+                  [s['category-suspended']]:
+                    item.status.toLowerCase() === 'suspended',
+                })}
+              >
+                {item.category}
+              </div>
             </td>
             <td className={s['name-window']}>
               <div>
@@ -38,25 +48,48 @@ export default function CompaniesRows({ company }: CompaniesRowsProps) {
                 <p> {item.name}</p>
               </div>
             </td>
-            <td className={s['promotion-window']}>
+            <td className={s['status-window']}>
               <div
-                className={clsx(s['promotion-content'], {
-                  [s['promotion-active']]:
-                    item.status.toLowerCase() === 'active',
-                  [s['promotion-not-active']]:
+                className={clsx(s['status-content'], {
+                  [s['status-active']]: item.status.toLowerCase() === 'active',
+                  [s['status-not-active']]:
                     item.status.toLowerCase() === 'not active',
-                  [s['promotion-pending']]:
+                  [s['status-pending']]:
                     item.status.toLowerCase() === 'pending',
-                  [s['promotion-suspended']]:
+                  [s['status-suspended']]:
                     item.status.toLowerCase() === 'suspended',
                 })}
               >
                 <p>{item.status}</p>
               </div>
             </td>
-            <td>{item.promotion ? 'Yes' : 'No'}</td>
-            <td>{item.country}</td>
-            <td>{item.createdAt}</td>
+            <td className={s['promotion-window']}>
+              <div className={s['promotion-content']}>
+                {item.promotion ? (
+                  <>
+                    <Image
+                      src="/images/svg/check.svg"
+                      width={16}
+                      height={16}
+                      alt="check sign"
+                    />
+                    <p className={s['promotion-yes']}> Yes</p>
+                  </>
+                ) : (
+                  <>
+                    <Image
+                      src="/images/svg/x-mark.svg"
+                      width={16}
+                      height={16}
+                      alt="cross sign"
+                    />
+                    <p className={s['promotion-no']}> No</p>
+                  </>
+                )}
+              </div>
+            </td>
+            <td className={s['country-window']}>{item.country}</td>
+            <td className={s['date-window']}>{formatDate(item.createdAt)}</td>
           </tr>
         );
       })}

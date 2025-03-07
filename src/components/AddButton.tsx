@@ -1,5 +1,7 @@
-import React from 'react';
+'use client';
 
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import s from '@/styles/components/AddButton.module.scss';
 
 interface AddButtonProps {
@@ -7,5 +9,13 @@ interface AddButtonProps {
 }
 
 export default function AddButton({ content }: AddButtonProps) {
-  return <button className={s.btn}>{content}</button>;
+  const router = useRouter();
+  const handleClick = () => {
+    router.push('/companies/new');
+  };
+  return (
+    <button onClick={handleClick} className={s.btn}>
+      {content}
+    </button>
+  );
 }

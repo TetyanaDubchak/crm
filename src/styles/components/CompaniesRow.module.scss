@@ -5,14 +5,18 @@
 
 .row{
     background-color: v.$light-1-c;
-    margin-bottom: calcOutValue(8);
     border-radius: 4px;
+    height: calcOutValue(56);
     &:not(:last-child){
-        margin-bottom: calcOutValue(8);
+        border-bottom: calcOutValue(8) solid v.$light-4-c;
     }
 }
 
 .category-window{
+    vertical-align: middle;
+}
+
+.category-content{
     @include m.flexibility(row,flex-start,center);
     gap: calcOutValue(12);
     font-size:calcOutValue(12);
@@ -63,11 +67,13 @@
 }
 
 .name-window{
+    vertical-align: middle;
     div{
         @include m.flexibility(row,flex-start,center);
         @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
         font-weight: 500;
-        gap: calcOutValue(16);
+        height: 100%;
+        column-gap: calcOutValue(16);
     }
     
 
@@ -77,12 +83,21 @@
     }
 }
 
-.promotion-content{
+.status-window{
+    vertical-align: middle;
+    display: flex;
+    padding: calcOutValue(14);
+    align-items: center;
+    justify-content: center;
+}
+
+.status-content{
     @include m.flexibility(row,center,center);
-    gap: calcOutValue(8);
+    column-gap: calcOutValue(8);
     font-size: calcOutValue(14);
     line-height: calcOutValue(20);
     font-weight: 500;
+    height: 100%;
     text-transform: capitalize;
     padding: calcOutValue(4) calcOutValue(14);
     border-radius: calcOutValue(28);
@@ -96,7 +111,7 @@
     }
 }
 
-.promotion-active{
+.status-active{
     background-color: v.$green-1-c;
     color: v.$green-2-c;
     &::before{
@@ -104,7 +119,7 @@
     }
 }
 
-.promotion-not-active {
+.status-not-active {
     background-color: v.$red-1-c;
     color: v.$red-2-c;
 
@@ -113,7 +128,7 @@
     }
 }
 
-.promotion-pending {
+.status-pending {
     background-color: v.$orange-2-c;
     color: v.$orange-3-c;
 
@@ -122,11 +137,49 @@
     }
 }
 
-.promotion-suspended {
+.status-suspended {
     background-color: v.$blue-2-c;
     color: v.$blue-1-c;
 
     &::before {
         background-color: v.$blue-1-c;
     }
+}
+
+.promotion-window{
+    vertical-align: middle;
+}
+
+.promotion-content{
+    @include m.flexibility(row,center,center);
+    gap: calcOutValue(6);
+
+    .promotion-yes{
+        @include m.text-character(calcOutValue(14), calcOutValue(20), v.$green-2-c);
+        font-weight: 500;
+    }
+
+    .promotion-no{
+        @include m.text-character(calcOutValue(14), calcOutValue(20), v.$red-2-c);
+        font-weight: 500;
+    }
+
+    img{
+        width: calcOutValue(16);
+        height: calcOutValue(16);
+    }
+}
+
+.country-window{
+    vertical-align: middle;
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+    font-weight: 500;
+    text-align: center;
+}
+
+.date-window{
+    vertical-align: middle;
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+    font-weight: 500;
+    text-align: center;
 }

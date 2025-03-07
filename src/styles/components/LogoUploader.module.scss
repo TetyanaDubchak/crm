@@ -1,0 +1,36 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../function.scss';
+
+.wrapper{
+    @include m.flexibility(row,flex-start,flex-start);
+    gap: calcOutValue(20);
+    width: 100%;
+}
+
+.title{
+    @include m.text-character(calcOutValue(16), calcOutValue(24), v.$dark-1-c);
+}
+
+.choose-wrapper{
+    background-color: v.$light-5-c;
+    border-radius: 50%;
+    border: 1px v.$dark-2-c;
+    border-style: dashed;
+    width: calcOutValue(176);
+    height: calcOutValue(176);
+
+    svg{
+        width: calcOutValue(48);
+        height: calcOutValue(48);
+    }
+}
+
+.choose-file{
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    border: 0px solid transparent;
+    background-color: transparent;
+}

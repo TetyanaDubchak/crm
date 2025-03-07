@@ -1,0 +1,20 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../function.scss';
+
+.main-wrapper{
+    @include m.flexibility(row, flex-start,flex-start);
+    column-gap: calcOutValue(28);
+    margin-bottom: calcOutValue(40);
+}
+
+.first-extra-wrapper{
+    @include m.flexibility(column, space-between,center);
+    gap: calcOutValue(20);
+}
+
+.second-extra-wrapper{
+    @include m.flexibility(column, space-between, center);
+    gap: calcOutValue(20);
+}

@@ -1,0 +1,22 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.label-wrapper{
+    @include m.flexibility(column, flex-start,flex-start);
+    @include m.text-character(calcOutValue(16), calcOutValue(24), v.$dark-1-c);
+    row-gap: calcOutValue(8);
+    width: calcOutValue(308);
+}
+
+.value-wrapper{
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$grey-4-c);
+    box-shadow: 0px 6px 10px -2px #5569870A;
+    border: 1px solid v.$grey-1-c;
+    outline: none;
+    width: 100%;
+    background-color: v.$light-5-c;
+    border-radius: calcOutValue(4);
+    padding: calcOutValue(12);
+}

@@ -1,0 +1,45 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.backdrop{
+    position: fixed;
+    z-index: 16;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: v.$dark-1-c;
+    // opacity: 60%;
+}
+
+.modal{
+    background-color: v.$light-4-c;
+    border-radius: calcOutValue(8);
+    padding: calcOutValue(28);
+    position: relative;
+}
+
+.main-title{
+    @include m.text-character(calcOutValue(20), calcOutValue(28), v.$dark-1-c);
+    font-weight: 600;
+    margin-bottom: calcOutValue(42);
+}
+
+.close-button{
+    position: absolute;
+    padding: calcOutValue(4);
+    top: calcOutValue(12);
+    right: calcOutValue(12);
+    width: calcOutValue(24);
+    height: calcOutValue(24);
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+}
