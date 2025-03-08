@@ -14,13 +14,15 @@
 }
 
 .choose-wrapper{
+    @include m.flexibility(column, center,center);
+    gap: calcOutValue(4);
     background-color: v.$light-5-c;
     border-radius: 50%;
-    border: 1px v.$dark-2-c;
-    border-style: dashed;
+    border: calcOutValue(1) dashed v.$dark-2-c;
     width: calcOutValue(176);
     height: calcOutValue(176);
-
+    margin-bottom: calcOutValue(8);
+    overflow: hidden;
     svg{
         width: calcOutValue(48);
         height: calcOutValue(48);
@@ -28,9 +30,15 @@
 }
 
 .choose-file{
+    @include m.visually-hidden;
     width: 100%;
     height: 100%;
     color: transparent;
     border: 0px solid transparent;
     background-color: transparent;
+}
+
+.picture{
+    width: 100%;
+    height: 100%;
 }
