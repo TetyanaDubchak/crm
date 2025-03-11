@@ -1,5 +1,7 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import { fetchCompanies } from '@/lib/api';
+import { useReceivedData } from '@/lib/store';
 import s from '../styles/components/CompanyTable.module.scss';
 import CompaniesRows from './CompaniesRow';
 
@@ -12,9 +14,17 @@ const headers = [
   'Joined data',
 ];
 
-export default async function CompanyTable() {
-  const data = await fetchCompanies();
+export default function CompanyTable() {
+  const { setReceivedCompany, receivedCompany } = useReceivedData();
 
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchCompanies();
+      setReceivedCompany(data);
+    };
+
+    getData();
+  }, [setReceivedCompany]);
   return (
     <div className={s.wrapper}>
       <table className={s['table']}>
@@ -28,7 +38,13 @@ export default async function CompanyTable() {
           </tr>
         </thead>
         <tbody>
-          <CompaniesRows company={data} />
+          {receivedCompany ? (
+            <CompaniesRows company={receivedCompany} />
+          ) : (
+            <tr>
+              <td colSpan={headers.length}>Loading...</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

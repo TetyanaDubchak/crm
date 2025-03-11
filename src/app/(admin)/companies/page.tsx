@@ -1,11 +1,14 @@
-import Header from '@/components/Header';
+import CompanyTable from '@/components/CompanyTable';
 
-// import s from '../../../styles/pages/Dashboard.module.scss';
+export interface PageProps {
+  search: React.ReactNode;
+}
 
-export default function Companies() {
+export default function Page({ search }: PageProps) {
   return (
     <>
-      <Header>Companies</Header>
+      {search}
+      <CompanyTable />
     </>
   );
 }

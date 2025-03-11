@@ -6,6 +6,23 @@ export interface Country {
     quantity: number;
 }
 
+export interface Company {
+  id: string;
+  country: string;
+  category: string;
+  name: string;
+  status: string;
+  promotion: boolean;
+  createdAt: string;
+  info: string;
+  promotions: {
+    promotion: string;
+    title: string;
+    subtitle: string;
+  };
+}
+
+
 export interface Companies{
   id: string;
   country: string;
@@ -46,7 +63,6 @@ export const fetchCountries = async (): Promise<Country[]> => {
 export const fetchCompanies = async (): Promise<Companies[]> => {
     try {
         const response = await api.get<Companies[]>('companies');
-        console.log(response.data);
         return response.data;
     } catch (error) {
         console.error("Error", error);

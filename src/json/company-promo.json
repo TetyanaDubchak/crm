@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "promotion": "20",
+    "title": "Discount on this product",
+    "subtitle": "Jorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 2,
+    "promotion": "20",
+    "title": "Discount on this product",
+    "subtitle": "Jorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 3,
+    "promotion": "20",
+    "title": "Discount on this product",
+    "subtitle": "Jorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 4,
+    "promotion": "20",
+    "title": "Discount on this product",
+    "subtitle": "Jorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 5,
+    "promotion": "20",
+    "title": "Discount on this product",
+    "subtitle": "Jorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 6,
+    "promotion": "20",
+    "title": "Discount on this product",
+    "subtitle": "Jorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]

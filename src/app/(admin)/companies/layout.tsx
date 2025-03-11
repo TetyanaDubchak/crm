@@ -2,25 +2,14 @@ import React from 'react';
 
 export interface LayoutProps {
   children: React.ReactNode;
-  search: React.ReactNode;
-  companiesList: React.ReactNode;
-  modal: React.ReactNode;
+  header: React.ReactNode;
 }
 
-export default function Layout({
-  children,
-  search,
-  companiesList,
-  modal,
-}: LayoutProps) {
+export default function Layout({ children, header }: LayoutProps) {
   return (
     <div>
-      {children}
-      <main>
-        <div>{search}</div>
-        <div>{companiesList}</div>
-        {modal}
-      </main>
+      {header}
+      <main>{children}</main>
     </div>
   );
 }

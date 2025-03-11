@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Companies } from '@/lib/api';
 import s from '../styles/components/CompaniesRow.module.scss';
 import Image from 'next/image';
@@ -38,15 +39,17 @@ export default function CompaniesRows({ company }: CompaniesRowsProps) {
               </div>
             </td>
             <td className={s['name-window']}>
-              <div>
-                <Image
-                  src="/images/comp-logo.svg"
-                  alt="companies logotype"
-                  width={32}
-                  height={32}
-                />
-                <p> {item.name}</p>
-              </div>
+              <Link href={`/companies/${item.id}`}>
+                <div>
+                  <Image
+                    src="/images/comp-logo.svg"
+                    alt="companies logotype"
+                    width={32}
+                    height={32}
+                  />
+                  <p> {item.name}</p>
+                </div>
+              </Link>
             </td>
             <td className={s['status-window']}>
               <div
