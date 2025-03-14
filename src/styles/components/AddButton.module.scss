@@ -6,7 +6,7 @@
 .btn{
     @include m.text-character(calcOutValue(16),calcOutValue(24),v.$light-1-c);
     padding: calcOutValue(10) calcOutValue(20);
-    border-radius: 4px;
+    border-radius: calcOutValue(4);
     background-color: v.$dark-1-c;
     text-transform: capitalize;
 }

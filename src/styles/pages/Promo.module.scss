@@ -1,0 +1,10 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper {
+    @include m.flexibility(row, space-between, flex-start);
+    gap: calcOutValue(20);
+    padding: calcOutValue(0) calcOutValue(28) calcOutValue(40) calcOutValue(40);
+}

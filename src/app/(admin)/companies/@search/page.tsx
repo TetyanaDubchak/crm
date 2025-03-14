@@ -9,7 +9,7 @@ export default function Search() {
   return (
     <div className={s.wrapper}>
       <SearchInput />
-      <AddButton content="Add company" />
+      <AddButton link="/companies/new" content="Add company" />
     </div>
   );
 }

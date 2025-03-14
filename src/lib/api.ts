@@ -19,7 +19,7 @@ export interface Company {
     promotion: string;
     title: string;
     subtitle: string;
-  };
+  }[];
 }
 
 

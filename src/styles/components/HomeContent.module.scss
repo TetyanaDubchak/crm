@@ -1,0 +1,39 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    @include m.flexibility(column,center,center);
+    gap: calcOutValue(80);
+    height: 100vh;
+    background: rgb(233, 213, 255);
+    background: linear-gradient(180deg, rgba(233, 213, 255, 1) 39%, rgba(217, 249, 157, 1) 64%);
+}
+
+.title{
+    @include m.text-character(calcOutValue(50), calcOutValue(56), v.$dark-1-c);
+    font-weight: 700;
+}
+
+.link-wrapper{
+    @include m.flexibility(row, center, center);
+    gap: calcOutValue(100);
+}
+
+.link-btn{
+    border-radius: calcOutValue(20);
+    padding: calcOutValue(10) calcOutValue(20);
+    border: calcOutValue(5) solid v.$dark-1-c;
+    transition: transform 0.5s ease-in-out, border-color 0.3s ease-in-out;
+    &:hover{
+       border-color: v.$green-2-c;
+       transform: scale(1.1)
+    }
+}
+
+.link{
+    @include m.text-character(calcOutValue(24), calcOutValue(36), v.$dark-1-c);
+    font-weight: 600;
+    text-transform: uppercase;
+}

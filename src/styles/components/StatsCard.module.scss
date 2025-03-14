@@ -21,7 +21,7 @@
         content: '';
         display: block;
         width: calcOutValue(16);
-        height: 2px;
+        height: calcOutValue(2);
         background-color: v.$dark-1-c;
         border-radius: calcOutValue(20);
     }

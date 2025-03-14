@@ -20,7 +20,7 @@ export default function Sidebar({}) {
     <aside>
       <div className={s.wrapper}>
         <Image
-          src="images/svg/logotype.svg"
+          src="/images/svg/logotype.svg"
           alt="logo"
           width={122}
           height={24}

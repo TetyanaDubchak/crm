@@ -4,12 +4,13 @@
 @import '../../styles/function.scss';
 
 .wrapper{
+    position: fixed;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
     width: calcOutValue(240);
     background-color: v.$dark-1-c;
-    padding: calcOutValue(32) calcOutValue(4) calcOutValue(120) calcOutValue(4);
+    padding: calcOutValue(32) calcOutValue(4) calcOutValue(24) calcOutValue(4);
 }
 
 .logo{

@@ -1,0 +1,53 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.list-promo{
+    @include m.flexibility(row, space-between,flex-start);
+    gap: calcOutValue(20);
+    flex-wrap: wrap;
+    width: 74%;
+}
+
+.element{
+    position: relative;
+    width: calc((100% - calcOutValue(40)) / 3);
+    border-radius: calcOutValue(4);
+    background-color: v.$light-4-c;
+}
+
+.picture-wrapper{
+    height: calcOutValue(160);
+    background-color: v.$grey-2-c;
+    border-radius: calcOutValue(4);
+}
+
+.descripe-wrapper{
+    padding: calcOutValue(20);
+}
+
+.descripe-title{
+    @include m.text-character(calcOutValue(16), calcOutValue(24), v.$dark-1-c);
+    font-weight: 600;
+    margin-bottom: calcOutValue(12);
+}
+
+.descripe-text{
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+}
+
+.percent-wrapper{
+    @include m.text-character(calcOutValue(12), calcOutValue(16), v.$green-4-c);
+    @include m.flexibility(row,flex-start,center);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: v.$dark-1-c;
+    width: calcOutValue(52);
+    height: calcOutValue(52);
+    padding-left: calcOutValue(2);
+    border-bottom-right-radius: calcOutValue(60);
+    border-bottom: calcOutValue(1) solid v.$green-4-c;
+    border-right: calcOutValue(1) solid v.$green-4-c;
+}
