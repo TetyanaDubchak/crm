@@ -37,27 +37,16 @@ export default function PromoModal() {
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <Form className={s['form']}>
         <div className={s['main-wrapper']}>
-          <div className={s['first-extra-wrapper']}>
-            <LogoUploader label="Logo" placeholder="Upload photo" />
-            <InputField type="text" label="Status" placeholder="Title" />
-            <InputField type="text" label="Country" placeholder="Ukraine" />
-          </div>
-          <div className={s['second-extra-wrapper']}>
-            <InputField type="text" label="Name" placeholder="Title" />
-            <InputField
-              type="text"
-              label="Category"
-              placeholder="Description"
-            />
-            <InputField
-              type="text"
-              label="Joined data"
-              placeholder="14.02.2021"
-            />
-            <InputField type="text" label="Country" placeholder="Description" />
-          </div>
+          <InputField type="text" label="Title" placeholder="Title" />
+          <InputField
+            type="text"
+            label="Description"
+            placeholder="Description"
+          />
+          <InputField type="text" label="Discount amount" placeholder="-40%" />
+          <LogoUploader label="Logo" placeholder="Upload photo" />
         </div>
-        <AddFormButton content="Add company" />
+        <AddFormButton content="Add promotion" />
       </Form>
     </Formik>
   );
