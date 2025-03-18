@@ -11,8 +11,8 @@
     @include m.text-character(calcOutValue(12), calcOutValue(16), v.$light-5-c);
     background-color: v.$dark-1-c;
     padding: calcOutValue(6) calcOutValue(20);
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-left-radius: calcOutValue(2);
+    border-bottom-left-radius: calcOutValue(2);
     text-align: start;
 }
 
@@ -27,7 +27,7 @@
     @include m.text-character(calcOutValue(12), calcOutValue(16), v.$dark-1-c);
     background-color: v.$green-4-c;
     padding: calcOutValue(6) calcOutValue(20);
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top-right-radius: calcOutValue(2);
+    border-bottom-right-radius: calcOutValue(2);
     width: calcOutValue(104);
 }

@@ -32,7 +32,7 @@ export default function Modal({ children, onClose, title }: ModalProps) {
     <div className={s.backdrop} onClick={handleBackdropClick}>
       <div className={s.modal}>
         <h2 className={s['main-title']}>Add {title}</h2>
-        <button className={s['close-button']} type="button">
+        <button className={s['close-button']} type="button" onClick={onClose}>
           <Icon type="close" />
         </button>
         <div>{children}</div>

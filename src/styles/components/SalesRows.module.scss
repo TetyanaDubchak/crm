@@ -12,7 +12,7 @@
     @include m.text-character(calcOutValue(14), calcOutValue(20),v.$dark-1-c);
     gap: calcOutValue(8);
     padding: calcOutValue(8) calcOutValue(20);
-    border-right: 1px solid v.$light-4-c;
+    border-right: calcOutValue(1) solid v.$light-4-c;
     img{
         width: calcOutValue(20);
         height: calcOutValue(20);
@@ -22,6 +22,7 @@
 .sold-content{
     @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
     text-align: center;
+    border-right: calcOutValue(1) solid v.$light-4-c;
 }
 
 .income-content{

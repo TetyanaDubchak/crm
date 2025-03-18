@@ -1,10 +1,11 @@
 import React from 'react';
 
-import s from '../styles/components/CompanyModal.module.scss';
+import s from '../styles/components/PromoModal.module.scss';
 import { Formik, Form } from 'formik';
 import InputField from './InputField';
 import AddFormButton from './AddFormButton';
 import LogoUploader from './LogoUploader';
+import LogoUploaderPromo from './LogoUploaderPromo';
 
 export type PromoFieldValues = {
   title: string;
@@ -44,7 +45,7 @@ export default function PromoModal() {
             placeholder="Description"
           />
           <InputField type="text" label="Discount amount" placeholder="-40%" />
-          <LogoUploader label="Logo" placeholder="Upload photo" />
+          <LogoUploaderPromo label="Image" placeholder="Upload photo" />
         </div>
         <AddFormButton content="Add promotion" />
       </Form>

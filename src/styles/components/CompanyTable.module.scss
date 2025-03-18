@@ -4,6 +4,7 @@
 @import '../../styles/function.scss';
 
 .wrapper{
+    height: 100%;
     padding: calcOutValue(32) calcOutValue(40) calcOutValue(56) calcOutValue(40);
     background-color: v.$light-4-c;
 }

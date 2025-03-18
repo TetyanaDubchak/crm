@@ -4,7 +4,7 @@
 @import '../../styles/function.scss';
 
 .wrapper{
-    border-bottom: 1px solid v.$grey-1-c;
+    border-bottom: calcOutValue(1) solid v.$grey-1-c;
     width: 100%;
     padding: calcOutValue(24) calcOutValue(40);
     @include m.flexibility(row, space-between, center);
@@ -18,6 +18,8 @@
 .user-wrapper{
     @include m.flexibility(row, flex-start,center);
     gap: calcOutValue(12);
+    border-left: calcOutValue(1) solid v.$grey-1-c;
+    padding-left: calcOutValue(20);
 }
 
 .picture{
@@ -26,5 +28,6 @@
 }
 
 .name{
-    @include m.text-character(calcOutValue(15), calcOutValue(24), v.$dark-1-c)
+    @include m.text-character(calcOutValue(15), calcOutValue(24), v.$dark-1-c);
+    font-weight: 600;
 }

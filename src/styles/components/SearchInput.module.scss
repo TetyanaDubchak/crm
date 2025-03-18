@@ -12,7 +12,7 @@
     @include m.text-character(calcOutValue(14),calcOutValue(20),v.$grey-3-c);
     font-weight: 500;
     border-radius: calcOutValue(4);
-    border: 1px solid v.$grey-1-c;
+    border: calcOutValue(1) solid v.$grey-1-c;
     padding: calcOutValue(12);
     background-color: transparent;
     width: 100%;

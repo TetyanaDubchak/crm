@@ -1,0 +1,10 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../function.scss';
+
+.main-wrapper {
+    @include m.flexibility(column, flex-start, center);
+    row-gap: calcOutValue(20);
+    margin-bottom: calcOutValue(20);
+}

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Icon from './Icon';
-import s from '@/styles/components/LogoUploader.module.scss';
+import s from '@/styles/components/LogoUploaderPromo.module.scss';
 
 export interface LogoUploaderPromoProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {

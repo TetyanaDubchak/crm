@@ -6,7 +6,7 @@ import PromotionsTable from '@/components/PromotionsTable';
 export default async function Page() {
   return (
     <div className={s.wrapper}>
-      <TitleSlots title="Sales details" />
+      <TitleSlots title="Promotions" />
       <PromotionsTable />
     </div>
   );

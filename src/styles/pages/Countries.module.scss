@@ -5,9 +5,9 @@
 
 .wrapper {
     background-color: v.$light-4-c;
-    border-radius: 4px;
+    border-radius: calcOutValue(4);
     width: 49%;
-    border: 1px solid v.$light-4-c;
+    border: calcOutValue(1) solid v.$light-4-c;
     height: calcOutValue(348);
 }
 
