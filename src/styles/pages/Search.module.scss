@@ -3,3 +3,7 @@
 
 @import '../../styles/function.scss';
 
+.wrapper{
+    @include m.flexibility(row, space-between, center);
+    padding: calcOutValue(40) calcOutValue(28) calcOutValue(40) calcOutValue(40);
+}

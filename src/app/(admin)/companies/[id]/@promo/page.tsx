@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import { useReceivedData } from '@/lib/store';
+import { useReceivedData, useSearchValue } from '@/lib/store';
 import { Company } from '@/lib/api';
 import s from '@/styles/pages/Promo.module.scss';
 import CompanyInfo from '@/components/CompanyInfo';

@@ -3,6 +3,14 @@
 
 @import '../../styles/function.scss';
 
+.loading{
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+    font-weight: 500;
+    text-align: center;
+    padding: calcOutValue(18);
+    width: 100%;
+}
+
 .wrapper{
     height: 100%;
     padding: calcOutValue(32) calcOutValue(40) calcOutValue(56) calcOutValue(40);

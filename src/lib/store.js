@@ -12,3 +12,10 @@ export const useReceivedData = create((set) => ({
     setReceivedCompany:(list)=> set(()=>({receivedCompany: list})),
         
 }))
+
+export const useSearchValue = create((set) => ({
+    inputValue: '',
+        
+    setInputValue:(value)=> set(()=>({inputValue: value})),
+        
+}))

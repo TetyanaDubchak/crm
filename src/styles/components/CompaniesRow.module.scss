@@ -3,6 +3,14 @@
 
 @import '../../styles/function.scss';
 
+.no-result{
+    @include m.text-character(calcOutValue(14),calcOutValue(20),v.$dark-1-c);
+    font-weight: 500;
+    text-align: center;
+    padding: calcOutValue(18);
+    width: 100%;
+}
+
 .row{
     background-color: v.$light-1-c;
     border-radius: 4px;

@@ -9,7 +9,7 @@ export default function Page() {
   const router = useRouter();
   return (
     <Modal title="new company" onClose={() => router.back()}>
-      <CompanyModal />
+      <CompanyModal onClose={() => router.back()} />
     </Modal>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-import { fetchCompanies } from '@/lib/api';
+import { fetchCompanies, Companies } from '@/lib/api';
 import { useReceivedData } from '@/lib/store';
 import s from '../styles/components/CompanyTable.module.scss';
 import CompaniesRows from './CompaniesRow';
@@ -14,7 +14,11 @@ const headers = [
   'Joined data',
 ];
 
-export default function CompanyTable() {
+interface CompanyTableProps {
+  filtredList: Companies[];
+}
+
+export default function CompanyTable({ filtredList }: CompanyTableProps) {
   const { setReceivedCompany, receivedCompany } = useReceivedData();
 
   useEffect(() => {
@@ -38,11 +42,13 @@ export default function CompanyTable() {
           </tr>
         </thead>
         <tbody>
-          {receivedCompany ? (
-            <CompaniesRows company={receivedCompany} />
+          {filtredList ? (
+            <CompaniesRows company={filtredList} />
           ) : (
-            <tr>
-              <td colSpan={headers.length}>Loading...</td>
+            <tr className={s['wrapper-loading']}>
+              <td className={s['loading']} colSpan={headers.length}>
+                Loading...
+              </td>
             </tr>
           )}
         </tbody>
