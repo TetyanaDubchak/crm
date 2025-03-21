@@ -1,3 +1,61 @@
+## CRM System
+
+### Description
+
+This is a simple CRM system built with Next.js, React, and SCSS. It provides an interface to manage companies and their promotions efficiently. Users can search, view, and add companies and promotions through an intuitive UI.
+
+Features
+
+Home Page: The entry point of the application.
+
+Companies Page:
+
+Displays a list of companies.
+
+Includes a search bar for filtering companies.
+
+Provides a form to add new companies.
+
+Clicking on a company navigates to its promotions page.
+
+Promotions Page:
+
+Lists all promotions associated with a selected company.
+
+Includes a search bar for filtering promotions.
+
+Allows adding new promotions via a form.
+
+Dashboard Page: A dedicated page for an overview of the CRM system.
+
+Technologies Used
+
+Next.js – For server-side rendering and optimized performance.
+
+React – For building UI components.
+
+SCSS – For styling and modular styles.
+
+Installation
+
+Clone the repository:
+
+Install dependencies:
+
+Run the development server:
+
+Open http://localhost:3000 in your browser.
+
+Project Structure
+
+Future Improvements
+
+Implement authentication and user roles.
+
+Add analytics and reporting for companies and promotions.
+
+Improve UI/UX with animations and better styling.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

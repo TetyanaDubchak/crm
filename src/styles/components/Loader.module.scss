@@ -1,0 +1,21 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../function.scss';
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: calcOutValue(200);
+}
+
+.spinner{
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+    transform:  translate(-50%) rotate(165deg) !important;
+    margin: 0 auto;
+    color: #111827;
+    width: calcOutValue(50) !important;
+    height: calcOutValue(50) !important;
+}

@@ -12,7 +12,7 @@
 
 .value-wrapper{
     @include m.text-character(calcOutValue(14), calcOutValue(20), v.$grey-4-c);
-    box-shadow: 0px 6px 10px -2px #5569870A;
+    box-shadow: 0px calcOutValue(6) calcOutValue(10) calcOutValue(-2) #5569870A;
     border: calcOutValue(1) solid v.$grey-1-c;
     outline: none;
     width: 100%;

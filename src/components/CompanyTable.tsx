@@ -1,7 +1,6 @@
 'use client';
-import React, { useEffect } from 'react';
-import { fetchCompanies, Companies } from '@/lib/api';
-import { useReceivedData } from '@/lib/store';
+import React from 'react';
+import { Companies } from '@/lib/api';
 import s from '../styles/components/CompanyTable.module.scss';
 import CompaniesRows from './CompaniesRow';
 
@@ -15,20 +14,10 @@ const headers = [
 ];
 
 interface CompanyTableProps {
-  filtredList: Companies[];
+  filteredList: Companies[];
 }
 
-export default function CompanyTable({ filtredList }: CompanyTableProps) {
-  const { setReceivedCompany, receivedCompany } = useReceivedData();
-
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetchCompanies();
-      setReceivedCompany(data);
-    };
-
-    getData();
-  }, [setReceivedCompany]);
+export default function CompanyTable({ filteredList }: CompanyTableProps) {
   return (
     <div className={s.wrapper}>
       <table className={s['table']}>
@@ -42,15 +31,7 @@ export default function CompanyTable({ filtredList }: CompanyTableProps) {
           </tr>
         </thead>
         <tbody>
-          {filtredList ? (
-            <CompaniesRows company={filtredList} />
-          ) : (
-            <tr className={s['wrapper-loading']}>
-              <td className={s['loading']} colSpan={headers.length}>
-                Loading...
-              </td>
-            </tr>
-          )}
+          <CompaniesRows company={filteredList} />
         </tbody>
       </table>
     </div>

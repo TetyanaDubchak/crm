@@ -8,7 +8,7 @@
     background: radial-gradient(circle, rgba(233, 213, 255, 1) 16%, rgba(217, 249, 157, 1) 78%);
     padding: calcOutValue(28);
     flex-basis: calc((100% - calcOutValue(60)) / 4);
-    border-radius: 4px;
+    border-radius: calcOutValue(4);
 }
 
 .title{

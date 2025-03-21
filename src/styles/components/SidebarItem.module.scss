@@ -33,7 +33,7 @@
         display: block;
         width:calcOutValue(4);
         height: calcOutValue(36);
-        border-radius: 2px;
+        border-radius: calcOutValue(2);
         background-color: v.$light-3-c;
     }
 }

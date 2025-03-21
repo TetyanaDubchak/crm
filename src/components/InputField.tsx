@@ -7,6 +7,7 @@ export interface InputFieldProps {
   type: string;
   placeholder: string;
   name: string;
+  required?: boolean;
 }
 
 export default function InputField({
@@ -14,6 +15,7 @@ export default function InputField({
   type,
   placeholder,
   name,
+  required = false,
 }: InputFieldProps) {
   return (
     <label className={s['label-wrapper']}>
@@ -23,6 +25,7 @@ export default function InputField({
         className={s['value-wrapper']}
         type={type}
         placeholder={placeholder}
+        required={required}
       />
     </label>
   );

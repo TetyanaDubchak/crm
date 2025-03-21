@@ -17,7 +17,7 @@
     background-color: v.$dark-1-c;
     padding: calcOutValue(12);
     padding-bottom: 0;
-    border-radius: 4px;
+    border-radius: calcOutValue(4);
 }
 
 .element:nth-child(even){

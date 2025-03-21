@@ -6,11 +6,23 @@ import { Company } from '@/lib/api';
 import s from '@/styles/pages/Promo.module.scss';
 import CompanyInfo from '@/components/CompanyInfo';
 import PromoLabels from '@/components/PromoLabels';
+import Loader from '@/components/Loader';
 
 export default function Promo() {
-  const [currentCompany, setCurrentCompany] = useState<Company | null>(null);
   const params = useParams();
   const companyId = params.id;
+  const [currentCompany, setCurrentCompany] = useState<Company | null>(null);
+  const listPromo = currentCompany?.promotions;
+  const [loading, setLoading] = useState(true);
+  const [filteredPromo, setFilteredPromo] = useState<
+    {
+      promotion: string;
+      title: string;
+      subtitle: string;
+    }[]
+  >(listPromo ?? []);
+  const { inputValue } = useSearchValue();
+
   const { receivedCompany }: { receivedCompany: Company[] } = useReceivedData();
 
   useEffect(() => {
@@ -22,10 +34,24 @@ export default function Promo() {
     setCurrentCompany(result || null);
   }, [companyId, receivedCompany]);
 
+  useEffect(() => {
+    const result = listPromo?.filter((item) =>
+      item.title.toLowerCase().includes(inputValue.toLowerCase().trim()),
+    );
+    setFilteredPromo(result ?? []);
+    setLoading(false);
+  }, [inputValue, listPromo]);
+
   return (
     <div className={s.wrapper}>
       {currentCompany && <CompanyInfo info={currentCompany} />}
-      {currentCompany && <PromoLabels info={currentCompany} />}
+      {loading ? (
+        <Loader />
+      ) : filteredPromo && filteredPromo?.length > 0 ? (
+        <PromoLabels info={filteredPromo} />
+      ) : filteredPromo && filteredPromo.length > 0 ? null : (
+        <p className={s['no-result']}>Sorry, no result...</p>
+      )}
     </div>
   );
 }

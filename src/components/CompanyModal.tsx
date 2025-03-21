@@ -44,12 +44,14 @@ export default function CompanyModal({ onClose }: CompanyModalProps) {
               type="text"
               label="Status"
               placeholder="Title"
+              required={true}
             />
             <InputField
               name="country"
               type="text"
               label="Country"
               placeholder="Ukraine"
+              required={true}
             />
           </div>
           <div className={s['second-extra-wrapper']}>
@@ -58,24 +60,28 @@ export default function CompanyModal({ onClose }: CompanyModalProps) {
               type="text"
               label="Name"
               placeholder="Title"
+              required={true}
             />
             <InputField
               name="category"
               type="text"
               label="Category"
               placeholder="Description"
+              required={true}
             />
             <InputField
               name="joinedDate"
               type="text"
               label="Joined data"
               placeholder="14.02.2021"
+              required={true}
             />
             <InputField
               name="description"
               type="text"
               label="Description"
               placeholder="Description"
+              required={true}
             />
           </div>
         </div>

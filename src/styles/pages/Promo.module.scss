@@ -8,3 +8,10 @@
     gap: calcOutValue(20);
     padding: calcOutValue(0) calcOutValue(28) calcOutValue(40) calcOutValue(40);
 }
+
+.no-result {
+    @include m.text-character(calcOutValue(14), calcOutValue(20), v.$dark-1-c);
+    font-weight: 500;
+    text-align: center;
+    width: 74%;
+}

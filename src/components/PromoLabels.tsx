@@ -1,38 +1,19 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { Company } from '@/lib/api';
-import { useSearchValue } from '@/lib/store';
+import React from 'react';
 import s from '../styles/components/PromoLabels.module.scss';
 
 interface PromoLabelsProps {
-  info?: Company;
+  info: {
+    promotion: string;
+    title: string;
+    subtitle: string;
+  }[];
 }
 
 export default function PromoLabels({ info }: PromoLabelsProps) {
-  const [filteredPromo, setFilteredPromo] = useState();
-  const { inputValue } = useSearchValue();
-  const list = info?.promotions;
-
-  useEffect(() => {
-    const result = list?.filter((item) =>
-      item.title.toLowerCase().includes(inputValue.toLowerCase().trim()),
-    );
-    setFilteredPromo(result);
-  }, [inputValue, list]);
-
-  if (!filteredPromo || filteredPromo.length === 0) {
-    return (
-      <tr className={s['wrapper-no-result']}>
-        <td colSpan={6} className={s['no-result']}>
-          No result...
-        </td>
-      </tr>
-    );
-  }
-
   return (
     <ul className={s['list-promo']}>
-      {filteredPromo?.map((item, inx) => {
+      {info?.map((item, inx) => {
         return (
           <li className={s.element} key={inx}>
             <div className={s['picture-wrapper']}></div>

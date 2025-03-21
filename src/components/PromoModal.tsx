@@ -8,43 +8,51 @@ import LogoUploader from './LogoUploader';
 import LogoUploaderPromo from './LogoUploaderPromo';
 
 export type PromoFieldValues = {
-  title: string;
-  description: string;
-  status: string;
-  joinedDate: string;
-  categoryId: string;
-  countryId: string;
+  title: '';
+  description: '';
+  amount: '';
 };
 
 const initialValues: PromoFieldValues = {
   title: '',
   description: '',
-  status: 'active',
-  joinedDate: '',
-  categoryId: '',
-  countryId: '',
+  amount: '',
 };
 
 interface PromoModalProps {
-  onSubmit?: (values: PromoFieldValues) => void | Promise<void>;
+  onClose: () => void;
 }
 
-export default function PromoModal() {
+export default function PromoModal({ onClose }: PromoModalProps) {
   const handleSubmit = () => {
-    console.log('Submit');
+    onClose();
   };
 
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <Form className={s['form']}>
         <div className={s['main-wrapper']}>
-          <InputField type="text" label="Title" placeholder="Title" />
           <InputField
+            name="title"
+            type="text"
+            label="Title"
+            placeholder="Title"
+            required={true}
+          />
+          <InputField
+            name="description"
             type="text"
             label="Description"
             placeholder="Description"
+            required={true}
           />
-          <InputField type="text" label="Discount amount" placeholder="-40%" />
+          <InputField
+            name="amount"
+            type="text"
+            label="Discount amount"
+            placeholder="-40%"
+            required={true}
+          />
           <LogoUploaderPromo label="Image" placeholder="Upload photo" />
         </div>
         <AddFormButton content="Add promotion" />
