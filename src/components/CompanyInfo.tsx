@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Company } from '@/lib/api';
 import { clsx } from 'clsx';
 import s from '../styles/components/CompanyInfo.module.scss';
+import Loader from './Loader';
 
 interface CompanyInfoProps {
   info?: Company;
@@ -17,6 +18,9 @@ export default function CompanyInfo({ info }: CompanyInfoProps) {
       year: 'numeric',
     });
   };
+
+  if (!info) return <Loader />;
+
   return (
     <div className={s['main-wrapper']}>
       <div className={s['first-wrapper']}>
