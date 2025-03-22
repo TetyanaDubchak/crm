@@ -2,7 +2,6 @@ import React from 'react';
 
 export interface LayoutProps {
   children: React.ReactNode;
-  header: React.ReactNode;
   search: React.ReactNode;
   promo: React.ReactNode;
 }

@@ -4,7 +4,6 @@ import s from '../styles/components/PromoModal.module.scss';
 import { Formik, Form } from 'formik';
 import InputField from './InputField';
 import AddFormButton from './AddFormButton';
-import LogoUploader from './LogoUploader';
 import LogoUploaderPromo from './LogoUploaderPromo';
 
 export type PromoFieldValues = {
