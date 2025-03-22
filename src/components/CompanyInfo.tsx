@@ -10,7 +10,6 @@ interface CompanyInfoProps {
 }
 
 export default function CompanyInfo({ info }: CompanyInfoProps) {
-  console.log('Info', info);
   const formatDate = (isoDate: string) => {
     return new Date(isoDate).toLocaleDateString('uk-UA', {
       day: '2-digit',
@@ -46,7 +45,7 @@ export default function CompanyInfo({ info }: CompanyInfoProps) {
         <div className={s['extra-wrapper']}>
           <p>Category: {info?.category}</p>
           <p>Country: {info?.country}</p>
-          <p>Joined data: {formatDate(info.createdAt)}</p>
+          {info && <p>Joined data: {formatDate(info.createdAt)}</p>}
         </div>
         <p className={s['info-text']}>{info?.info}</p>
       </div>
