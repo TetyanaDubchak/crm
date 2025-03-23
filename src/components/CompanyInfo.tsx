@@ -49,7 +49,7 @@ export default function CompanyInfo({ info }: CompanyInfoProps) {
         <div className={s['extra-wrapper']}>
           <p>Category: {info?.category}</p>
           <p>Country: {info?.country}</p>
-          {info && <p>Joined data: {formatDate(info.createdAt)}</p>}
+          {info?.createdAt && <p>Joined data: {formatDate(info.createdAt)}</p>}
         </div>
         <p className={s['info-text']}>{info?.info}</p>
       </div>

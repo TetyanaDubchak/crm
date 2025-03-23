@@ -55,8 +55,8 @@ export const fetchCountries = async (): Promise<Country[]> => {
 
         return response.data;
     } catch (error) {
-      console.log(error);
-        throw new Error('Failed to fetch countries');
+      console.error(error);
+      throw new Error('Failed to fetch countries');
   }
 };
 
