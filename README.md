@@ -22,22 +22,23 @@ Lists all promotions associated with a selected company.
 Includes a search bar for filtering promotions.
 Allows adding new promotions via a form.
 
-### Dashboard Page: [dashboard](https://crm-git-main-tatianas-projects-3041114c.vercel.app/dashboard)
+#### Dashboard Page: [dashboard](https://crm-git-main-tatianas-projects-3041114c.vercel.app/dashboard)
 
 A dedicated page for an overview of the CRM system.
 
 ### Technologies Used
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) Next.js – For server-side rendering and optimized performance.
+- Next.js – For server-side rendering and optimized performance.
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) React – For building UI components.
+- React – For building UI components.
 
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) SCSS – For styling and modular styles.
+- SCSS – For styling and modular styles.
 
-![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge) Axios
+- Axios
 
-![Zustand](https://img.shields.io/badge/Zustand-000000?style=for-the-badge) Zustand
+- Zustand
 
-![Clsx](https://img.shields.io/badge/Clsx-0088CC?style=for-the-badge) Clsx
+- Clsx
 
 ![React Spinners](https://img.shields.io/badge/React_Spinners-61DAFB?style=for-the-badge) React Spinners
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge) ![Zustand](https://img.shields.io/badge/Zustand-000000?style=for-the-badge) ![Clsx](https://img.shields.io/badge/Clsx-0088CC?style=for-the-badge)
