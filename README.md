@@ -6,23 +6,23 @@ This is a simple CRM system built with Next.js, React, and SCSS. It provides an 
 
 ### Features
 
-#### Home Page: [home](https://crm-git-main-tatianas-projects-3041114c.vercel.app/)
+####  [Home Page:](https://crm-git-main-tatianas-projects-3041114c.vercel.app/)
 
 The entry point of the application.
 
-#### Companies Page: [companies](https://crm-git-main-tatianas-projects-3041114c.vercel.app/companies)
+####  [Companies Page:](https://crm-git-main-tatianas-projects-3041114c.vercel.app/companies)
 
 Displays a list of companies.
 Includes a search bar for filtering companies. Provides a form to add new companies.
 Clicking on a company navigates to its promotions page.
 
-#### Promotions Page: [promo](https://crm-git-main-tatianas-projects-3041114c.vercel.app/companies/1)
+####  [Promotions Page:](https://crm-git-main-tatianas-projects-3041114c.vercel.app/companies/1)
 
 Lists all promotions associated with a selected company.
 Includes a search bar for filtering promotions.
 Allows adding new promotions via a form.
 
-#### Dashboard Page: [dashboard](https://crm-git-main-tatianas-projects-3041114c.vercel.app/dashboard)
+####  [Dashboard Page:](https://crm-git-main-tatianas-projects-3041114c.vercel.app/dashboard)
 
 A dedicated page for an overview of the CRM system.
 
@@ -43,5 +43,11 @@ A dedicated page for an overview of the CRM system.
 - React Spinners
 
 <p align="center">
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge) ![Zustand](https://img.shields.io/badge/Zustand-000000?style=for-the-badge) ![Clsx](https://img.shields.io/badge/Clsx-0088CC?style=for-the-badge) ![React Spinners](https://img.shields.io/badge/React_Spinners-61DAFB?style=for-the-badge) 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SCSS" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-original.svg" alt="Axios" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zustand/zustand-original.svg" alt="Zustand" width="50" height="50"/>
+  <img src="https://raw.githubusercontent.com/lokesh-coder/react-spinners/HEAD/logo.svg" alt="React Spinners" width="50" height="50"/>
+  <img src="https://raw.githubusercontent.com/lukeed/clsx/main/media/logo.svg" alt="Clsx" width="50" height="50"/>
 </p>
